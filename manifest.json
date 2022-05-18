@@ -1,0 +1,15 @@
+{
+  "name": "Chat Styler",
+  "version": "1.0",
+  "description": "Streamlabs chat styler",
+  "permissions": ["activeTab"],
+  "web_accessible_resources": ["style.css"],
+  "content_scripts": [
+    {
+      "matches": ["https://beta.crunchyroll.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "manifest_version": 2
+}
