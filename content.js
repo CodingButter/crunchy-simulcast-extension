@@ -37,7 +37,7 @@
     })
 
   const injectSimulCastDate = async (location) => {
-    const blurredImage = document.querySelector(`[alt="Series background blurred"]`).cloneNode(true)
+    const blurredImage = document.querySelector(`.blurred-wrapper img`)
     const simulcastText = document.createElement("p")
     simulcastText.innerText = "Fetching Simulcast"
     detailsElement = await getMoreDetailsElement()
@@ -49,7 +49,7 @@
       detailsElement.querySelector("#simulcastdate") || document.createElement("div")
     simulElement.id = "simulcastdate"
     simulElement.innerHTML = ""
-    simulElement.append(blurredImage)
+    if (blurredImage) simulElement.append(blurredImage.cloneNode(true))
     simulElement.append(simulcastText)
     if (!detailsElement.querySelector("#simulcastdate")) {
       detailsElement.prepend(simulElement)
