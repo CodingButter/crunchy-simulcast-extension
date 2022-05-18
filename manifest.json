@@ -1,7 +1,7 @@
 {
-  "name": "Chat Styler",
+  "name": "CrunchyRoll Simulcast",
   "version": "1.0",
-  "description": "Streamlabs chat styler",
+  "description": "Crunchyroll Beta simulcast addon",
   "permissions": ["activeTab"],
   "web_accessible_resources": ["style.css"],
   "content_scripts": [
@@ -11,5 +11,6 @@
       "css": ["style.css"]
     }
   ],
+
   "manifest_version": 2
 }
