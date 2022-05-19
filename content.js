@@ -4,7 +4,7 @@
   const getSeriesName = (location) => {
     const split = location.split("/")
     const seriesname = split[5]
-    if (!seriesname) return false
+    if (!seriesname || location.indexOf("seasons") > -1) return false
     return seriesname
   }
   //Fetch Data From root site
